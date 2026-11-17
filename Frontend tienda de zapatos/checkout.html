@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Finalizar Compra - MIMO</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/Styles.css">
+    <style>
+        .checkout-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 2rem; max-width: 1000px; margin: 3rem auto; padding: 0 2rem; }
+        .seccion-pago { background: var(--beige); padding: 1.5rem; border-radius: 12px; }
+        .seccion-pago h3 { color: var(--azul-noche); margin-bottom: 1rem; border-bottom: 2px solid var(--dorado); padding-bottom: 0.5rem;}
+    </style>
+</head>
+<body>
+
+        <header>
+        <div class="logo" onclick="window.location.href='index.html'" style="cursor: pointer;">
+            MIMO <span>Pasos para toda tu vida</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Catálogo</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+            </ul>
+        </nav>
+        <div class="header-icons">
+            <a href="mis-pedidos.html">📦</a>
+        </div>
+    </header>
+
+    <main class="checkout-grid">
+        <!-- Columna Izquierda: Datos -->
+        <div>
+            <div class="seccion-pago" style="margin-bottom: 2rem;">
+                <h3>Dirección de Envío</h3>
+                <div class="form-group">
+                    <label>Dirección completa</label>
+                    <input type="text" placeholder="Calle 123 #45-67, Apto 101">
+                </div>
+                <div class="form-group">
+                    <label>Ciudad</label>
+                    <input type="text" placeholder="Bogotá">
+                </div>
+            </div>
+
+            <div class="seccion-pago">
+                <h3>Método de Pago</h3>
+                <div class="form-group">
+                    <label><input type="radio" name="pago" checked> Tarjeta de Crédito / Débito</label>
+                </div>
+                <div class="form-group">
+                    <label><input type="radio" name="pago"> Transferencia Bancaria</label>
+                </div>
+                <div class="form-group">
+                    <label><input type="radio" name="pago"> Pago contra entrega</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Columna Derecha: Resumen -->
+        <div class="seccion-pago" style="height: fit-content;">
+            <h3>Resumen del Pedido</h3>
+            <div class="resumen-linea" style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;"><span>2 productos</span> <span>$420.00</span></div>
+            <div class="resumen-linea" style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;"><span>Envío</span> <span>$10.00</span></div>
+            <div class="resumen-linea total-linea" style="display: flex; justify-content: space-between; font-size: 1.3rem; font-weight: 700; color: var(--dorado); border-top: 1px solid var(--azul-profundo); padding-top: 0.5rem; margin-top: 0.5rem;"><span>Total</span> <span>$430.00</span></div>
+            
+            <button class="btn btn-primary" style="width: 100%; margin-top: 1.5rem;">Confirmar Pedido</button>
+            <p style="font-size: 0.8rem; color: var(--azul-profundo); text-align: center; margin-top: 1rem;">Al confirmar, aceptas nuestros términos y condiciones.</p>
+        </div>
+        <button class="btn btn-secondary" 
+        onclick="window.location.href='index.html'" 
+        style="width: 100%; margin-top: 0.8rem;">
+        ← Seguir comprando
+</button>
+    </main>
+
+    <footer>
+        <p>© 2026 MIMO. Pasos para toda tu vida.</p>
+    </footer>
+
+</body>
+</html>

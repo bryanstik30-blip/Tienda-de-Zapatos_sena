@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Carrito de Compras - MIMO</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/Styles.css">
+    <style>
+        .carrito-item { display: flex; align-items: center; gap: 1.5rem; padding: 1rem; border-bottom: 1px solid var(--azul-profundo); }
+        .carrito-img { width: 80px; height: 80px; background: #fff; border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+        .carrito-info { flex: 1; }
+        .carrito-acciones { display: flex; align-items: center; gap: 1rem; }
+        .resumen-carrito { background: var(--beige); padding: 1.5rem; border-radius: 12px; margin-top: 2rem; }
+        .resumen-linea { display: flex; justify-content: space-between; margin-bottom: 0.5rem; }
+        .total-linea { font-size: 1.3rem; font-weight: 700; color: var(--dorado); border-top: 1px solid var(--azul-profundo); padding-top: 0.5rem; margin-top: 0.5rem;}
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">MIMO <span>Pasos para toda tu vida</span></div>
+        <nav><ul><li><a href="index.html">Seguir comprando</a></li></ul></nav>
+        <div class="header-icons"><a href="carrito.html">🛒</a></div>
+    </header>
+
+    <main style="max-width: 900px; margin: 3rem auto; padding: 0 2rem;">
+        <h2 style="color: var(--azul-noche); margin-bottom: 2rem;">Tu Carrito de Compras</h2>
+
+        <!-- Item 1 -->
+        <div class="carrito-item">
+            <div class="carrito-img"></div>
+            <div class="carrito-info">
+                <h4 style="color: var(--azul-noche);">Zapatilla Runner Pro</h4>
+                <p style="color: var(--azul-profundo); font-size: 0.9rem;">Talla: 40 | Nike</p>
+                <p style="color: var(--dorado); font-weight: 700;">$120.00</p>
+            </div>
+            <div class="carrito-acciones">
+                <div style="display: flex; gap: 0.5rem; align-items: center;">
+                    <button class="btn btn-secondary" style="padding: 0.3rem 0.6rem;">-</button>
+                    <span>1</span>
+                    <button class="btn btn-secondary" style="padding: 0.3rem 0.6rem;">+</button>
+                </div>
+                <button class="btn btn-danger" style="padding: 0.4rem 0.6rem;">🗑️</button>
+            </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="carrito-item">
+            <div class="carrito-img">📷</div>
+            <div class="carrito-info">
+                <h4 style="color: var(--azul-noche);">Bota Urbana Classic</h4>
+                <p style="color: var(--azul-profundo); font-size: 0.9rem;">Talla: 42 | Timberland</p>
+                <p style="color: var(--dorado); font-weight: 700;">$150.00</p>
+            </div>
+            <div class="carrito-acciones">
+                <div style="display: flex; gap: 0.5rem; align-items: center;">
+                    <button class="btn btn-secondary" style="padding: 0.3rem 0.6rem;">-</button>
+                    <span>2</span>
+                    <button class="btn btn-secondary" style="padding: 0.3rem 0.6rem;">+</button>
+                </div>
+                <button class="btn btn-danger" style="padding: 0.4rem 0.6rem;">🗑️</button>
+            </div>
+        </div>
+
+        <!-- Resumen -->
+        <div class="resumen-carrito">
+            <div class="resumen-linea"><span>Subtotal:</span> <span>$420.00</span></div>
+            <div class="resumen-linea"><span>Envío:</span> <span>$10.00</span></div>
+            <div class="resumen-linea total-linea"><span>Total:</span> <span>$430.00</span></div>
+            <a href="checkout.html" class="btn btn-primary" style="display: block; text-align: center; margin-top: 1.5rem; text-decoration: none;">Ir a Pagar</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 MIMO. Pasos para toda tu vida.</p>
+    </footer>
+
+</body>
+</html> 

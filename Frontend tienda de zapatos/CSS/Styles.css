@@ -1,0 +1,267 @@
+/* =========================================
+   VARIABLES DE MARCA MIMO
+   ========================================= */
+:root {
+    --azul-noche: #0B2239;      /* Encabezado, navegación, logo, pie */
+    --azul-profundo: #1E4B6A;   /* Enlaces, categorías, secundarios */
+    --dorado: #C8A24A;          /* Botones principales, precios, promos */
+    --beige: #EAD9B6;           /* Tarjetas de producto, bloques */
+    --crema: #F8F2E6;           /* Fondo general */
+    --texto-oscuro: #0B2239;
+    --texto-claro: #F8F2E6;
+    --fuente-principal: 'Poppins', sans-serif; /* Importar de Google Fonts */
+}
+
+/* =========================================
+   RESET Y BASE
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fuente-principal);
+    background-color: var(--crema);
+    color: var(--texto-oscuro);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: var(--azul-profundo);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--dorado);
+}
+
+/* =========================================
+   HEADER Y NAVEGACIÓN
+   ========================================= */
+header {
+    background-color: var(--azul-noche);
+    color: var(--texto-claro);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--dorado);
+    letter-spacing: 2px;
+}
+
+.logo span {
+    font-size: 0.8rem;
+    color: var(--beige);
+    display: block;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    color: var(--beige);
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: var(--dorado);
+}
+
+.header-icons {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 1.2rem;
+}
+
+/* =========================================
+   BOTONES
+   ========================================= */
+.btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background-color: var(--dorado);
+    color: var(--azul-noche); /* Contraste premium */
+}
+
+.btn-primary:hover {
+    background-color: #b08d3a;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid var(--azul-profundo);
+    color: var(--azul-profundo);
+}
+
+.btn-danger {
+    background-color: #d9534f;
+    color: white;
+}
+
+/* =========================================
+   CATÁLOGO Y TARJETAS (RF07)
+   ========================================= */
+.hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, var(--azul-noche) 0%, var(--azul-profundo) 100%);
+    color: var(--texto-claro);
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: var(--dorado);
+    margin-bottom: 0.5rem;
+}
+
+.catalogo-container {
+    display: flex;
+    padding: 2rem;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.filtros {
+    width: 250px;
+    background-color: var(--beige);
+    padding: 1.5rem;
+    border-radius: 12px;
+    height: fit-content;
+}
+
+.filtros h3 {
+    color: var(--azul-noche);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--dorado);
+    padding-bottom: 0.5rem;
+}
+
+.productos-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.producto-card {
+    background-color: var(--beige);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.producto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(11, 34, 57, 0.15);
+}
+
+.producto-img {
+    width: 100%;
+    height: 200px;
+    background-color: #fff; /* Fondo blanco para que resalte el zapato */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ccc;
+}
+
+.producto-info {
+    padding: 1rem;
+}
+
+.producto-info h4 {
+    color: var(--azul-noche);
+    margin-bottom: 0.3rem;
+}
+
+.producto-info .marca {
+    color: var(--azul-profundo);
+    font-size: 0.9rem;
+}
+
+.producto-info .precio {
+    color: var(--dorado);
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-top: 0.5rem;
+}
+
+/* =========================================
+   FORMULARIOS (LOGIN / REGISTRO)
+   ========================================= */
+.form-container {
+    max-width: 400px;
+    margin: 4rem auto;
+    background-color: var(--beige);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.form-container h2 {
+    text-align: center;
+    color: var(--azul-noche);
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--azul-profundo);
+    font-weight: 500;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid var(--azul-profundo);
+    border-radius: 6px;
+    background-color: var(--crema);
+    font-family: inherit;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--dorado);
+    box-shadow: 0 0 0 2px rgba(200, 162, 74, 0.3);
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+footer {
+    background-color: var(--azul-noche);
+    color: var(--beige);
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+}

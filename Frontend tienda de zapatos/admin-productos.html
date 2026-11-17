@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Panel Admin - MIMO</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+    <style>
+        /* Estilos específicos para tabla admin */
+        .tabla-productos { width: 100%; border-collapse: collapse; margin-top: 2rem; background: var(--beige); border-radius: 8px; overflow: hidden; }
+        .tabla-productos th { background: var(--azul-noche); color: var(--dorado); padding: 1rem; text-align: left; }
+        .tabla-productos td { padding: 1rem; border-bottom: 1px solid var(--crema); }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">MIMO <span>Panel Administrativo</span></div>
+        <nav><ul><li><a href="index.html">Ver Tienda</a></li><li><a href="#">Cerrar Sesión</a></li></ul></nav>
+    </header>
+
+    <main style="max-width: 1200px; margin: 2rem auto; padding: 0 2rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <h2 style="color: var(--azul-noche);">Gestión de Catálogo</h2>
+            <button class="btn btn-primary">+ Nuevo Producto</button>
+        </div>
+
+        <table class="tabla-productos">
+            <thead>
+                <tr>
+                    <th>Imagen</th>
+                    <th>Nombre</th>
+                    <th>Marca</th>
+                    <th>Precio</th>
+                    <th>Stock</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>📷</td>
+                    <td>Zapatilla Runner Pro</td>
+                    <td>Nike</td>
+                    <td>$120.00</td>
+                    <td>15</td>
+                    <td>
+                        <button class="btn btn-secondary" style="padding: 0.4rem 0.8rem;">✏️</button>
+                        <button class="btn btn-danger" style="padding: 0.4rem 0.8rem;">🗑️</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>📷</td>
+                    <td>Bota Urbana Classic</td>
+                    <td>Timberland</td>
+                    <td>$150.00</td>
+                    <td>8</td>
+                    <td>
+                        <button class="btn btn-secondary" style="padding: 0.4rem 0.8rem;">✏️</button>
+                        <button class="btn btn-danger" style="padding: 0.4rem 0.8rem;">🗑️</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+</body>
+</html>

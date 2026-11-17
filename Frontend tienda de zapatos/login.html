@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Iniciar Sesión - MIMO</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/Styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">MIMO <span>Pasos para toda tu vida</span></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Catálogo</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="form-container">
+        <h2>Iniciar Sesión</h2>
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="correo">Correo electrónico</label>
+                <input type="email" id="correo" name="correo" placeholder="tucorreo@ejemplo.com" required>
+            </div>
+            <div class="form-group">
+                <label for="contrasena">Contraseña</label>
+                <input type="password" id="contrasena" name="contrasena" placeholder="••••••••" required>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Ingresar</button>
+        </form>
+
+        <!-- ✅ ENLACE DE CONTRASEÑA OLVIDADA (Agregado) -->
+        <p style="text-align: center; margin-top: 1rem;">
+            <a href="recuperar-contrasena.html" style="color: var(--azul-profundo); font-size: 0.9rem;">¿Olvidaste tu contraseña?</a>
+        </p>
+
+        <p style="text-align: center; margin-top: 1rem; color: var(--azul-profundo);">
+            ¿No tienes cuenta? <a href="registro.html" style="color: var(--dorado); font-weight: 600;">Regístrate aquí</a>
+        </p>
+    </main>
+
+    <footer>
+        <p>© 2026 MIMO. Pasos para toda tu vida.</p>
+    </footer>
+
+</body>
+</html>

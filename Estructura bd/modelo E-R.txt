@@ -1,0 +1,33 @@
+┌─────────────┐         ┌──────────────────┐         ┌─────────────┐
+│  clientes   │         │  carrito_items   │         │  productos  │
+├─────────────┤         ├──────────────────┤         ├─────────────┤
+│ id          │◄────────│ id_cliente       │         │ id          │
+│ nombre      │    1:N  │ id_producto      │──────►  │ nombre      │
+│ correo (UQ) │         │ cantidad         │    N:1  │ marca       │
+│ password    │         │ fecha_agregado   │         │ categoria   │
+│ direccion   │         └──────────────────┘         │ talla       │
+│ fecha_reg   │                                      │ precio      │
+└─────────────┘                                      │ stock       │
+      │                                              │ imagen      │
+      │ 1:N                                          │ descripcion │
+      ▼                                              └──────┬──────┘
+┌─────────────┐         ┌──────────────────┐               │
+│   pedidos   │         │ detalle_pedidos  │               │
+├─────────────┤         ├──────────────────┤               │
+│ id          │◄────────│ id_pedido        │               │
+│ id_cliente  │   1:N   │ id_producto      │───────────────┘
+│ fecha       │         │ cantidad         │        N:1
+│ total       │         │ precio_unitario  │
+│ estado      │         │ subtotal         │
+└─────────────┘         └──────────────────┘
+
+┌──────────────────┐
+│  admin_usuarios  │
+├──────────────────┤
+│ id               │
+│ nombre           │
+│ correo (UQ)      │
+│ password         │
+│ rol              │
+│ fecha_reg        │
+└──────────────────┘
